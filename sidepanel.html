@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <style>
+
+      body {
+    		margin: 0px;
+    		padding: 0px;
+        font: 12px Arial;
+        color: #DDDDDD;
+        background-color: #141D26;
+        opacity: 0.6;
+        overflow: scroll;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        cursor: pointer;
+        -webkit-user-select: none;
+      }
+      ::-webkit-scrollbar {
+        width: 13px;
+      }
+      ::-webkit-scrollbar-track {
+        -webkit-box-shadow:none;
+        border-radius: 0px;
+        background-color:#aaa;
+      }
+      ::-webkit-scrollbar-thumb {
+        border-radius: 0px;
+        -webkit-box-shadow: inset 1px 1px 6px #333;
+        background-color:#666;
+      }
+      a:link {
+          color: #4da6ff;
+          text-decoration: none;
+      }
+      a:visited {
+          color: #999999;
+          text-decoration: none;
+      }
+      a:hover {
+          color: #3333ff;
+          text-decoration: none;
+      }
+      a:active {
+          color: #ff4d4d;
+          text-decoration: none;
+      }
+
+      </style>
+    </head>
+    <body>
+    <div id="instructions"><font color="#989898">Grey = detected</font><br /><font color="#10A37F">Green = none detected</font><br /><font color="#d0d0d0">Light grey = manually completed</font><br /><font color="#ffffff">Double click to manually mark as complete</font><hr></div><div id="items"></div>
+
+    <script src="jquery.js"></script>
+    <script src="sidepanel.js"></script>
+
+  </body>
+</html>

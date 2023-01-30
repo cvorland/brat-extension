@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "version": "1.0",
+  "name": "Brat extension",
+  "description": "This extension adds a side panel to hopefully make our annotations easier.",
+  "content_scripts": [
+    {
+      "matches": ["http://ec2-3-144-241-74.us-east-2.compute.amazonaws.com/*"],
+      "all_frames": true,
+      "js": ["jquery.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["sidepanel.html"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+   "host_permissions": [
+    "http://ec2-3-144-241-74.us-east-2.compute.amazonaws.com/brat/#/SPIRIT_CONSORT/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
